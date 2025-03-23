@@ -7,13 +7,12 @@ export default {
       // Get authenticated user email from Cloudflare Access
       const email = request.headers.get("cf-access-authenticated-user-email");
       const country = request.cf?.country || "Unknown";
-      / Convert timestamp to UTC+8 (Singapore Time)
-      const timestamp = new Intl.DateTimeFormat('en-SG', {
-        timeZone: 'Asia/Singapore',
-        dateStyle: 'full',
-        timeStyle: 'long'
-      }).format(new Date());
-
+      // Convert timestamp to UTC+8 (Singapore Time)
+const timestamp = new Intl.DateTimeFormat('en-SG', {
+  timeZone: 'Asia/Singapore',
+  dateStyle: 'full',
+  timeStyle: 'long'
+}).format(new Date());
       // If not authenticated
       if (!email) {
         return new Response("Unauthorized – Are you logged in via Cloudflare Access?", {
