@@ -1,5 +1,4 @@
 name = "worker-return-https"
-type = "javascript"
 account_id = "b62cf582886e255d6968868ac6923037"
 workers_dev = false
 main = "src/index.js"
