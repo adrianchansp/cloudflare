@@ -36,7 +36,7 @@ export default {
 	  );};
 
 // /secure/${COUNTRY} (show flag)
-	elseif (path.startsWith("/secure/")) && (path !== "/secure") {	  
+	else (path.startsWith("/secure/")) && (path !== "/secure") {	  
 	  const flag = path.split("/")[2].toUpperCase();	
       return fetch(`https://b62cf582886e255d6968868ac6923037.r2.cloudflarestorage.com/flags-private/${flag}.png`, {
         headers: { 'Content-Type': 'image/png' }
