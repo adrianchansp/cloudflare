@@ -10,3 +10,4 @@ routes = [
 r2_buckets = [
   { binding = "FLAG_BUCKET", bucket_name = "flags-private", preview_bucket_name = "flags-private" }
 ]
+
